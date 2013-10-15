@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Bootstrap 101 Template</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      {{IMPORTS}}
+   </head>
+   <body>
+
+      <!-- Static navbar -->
+      <div class="navbar navbar-inverse navbar-static-top">
+         <div class="container">
+            <div class="navbar-header">
+               <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+               </button>
+               <a class="navbar-brand" href="#home">briangri</a>
+            </div>
+            <div class="navbar-collapse collapse">
+               <ul class="nav navbar-nav">
+                  {{NAV}}
+                  <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Projects<b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+                    {{SUBNAV}}
+                  </ul>
+                  </li>
+               </ul>
+            </div><!--/.nav-collapse -->
+         </div>
+      </div>
+
+      {{CONTENT}}
+
+      <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+      <script src="http://code.jquery.com/jquery.js"></script>
+      <!-- Include all compiled plugins (below), or include individual files as needed -->
+      <!-- Latest compiled and minified JavaScript -->
+      <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+   </body>
+</html>
