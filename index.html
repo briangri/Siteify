@@ -4,19 +4,67 @@
       <title>Bootstrap 101 Template</title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <!-- Latest compiled and minified CSS -->
-      <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+      <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
 
       <!-- Optional theme -->
-      <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-theme.min.css">
+      <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-theme.min.css">
 
+      <style>
+         .navbar {
+            margin-bottom: 0;
+         }
+         .jumbotron {
+            margin: .25em 0;
+         }
+         .hero_background {
+            background: url(res/img/sandpaper.png);
+         }
+      </style>
    </head>
    <body>
-      <h1>Hello, world!</h1>
 
+      <!-- Static navbar -->
+      <div class="navbar navbar-inverse navbar-static-top">
+         <div class="container">
+            <div class="navbar-header">
+               <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+               </button>
+               <a class="navbar-brand" href="#home">briangri</a>
+            </div>
+            <div class="navbar-collapse collapse">
+               <ul class="nav navbar-nav">
+                  <li class="active"><a href="#">Home</a></li>
+                  <li><a href="#resume">Resume</a></li>
+                  <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Projects<b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+                     <li><a href="#">ReColor It</a></li>
+                     <li><a href="#">Image Database</a></li>
+                     <li><a href="#">CSE 333 Web Server</a></li>
+                     <li><a href="#">Web Design</a></li>
+                  </ul>
+                  </li>
+               </ul>
+            </div><!--/.nav-collapse -->
+         </div>
+      </div>
+
+      <div class="container hero_background">
+         <div class="row">
+            <div class="col-md-8 hero-unit">
+               <h1> Welcome! </h1>
+
+               <p>Hi there! I'm Brian Griffith, programming enthusiast and computer science student at University of Washington. Take a look around at my projects and experience, and feel free to <a>contact me</a>!</p>
+            </div>
+         </div> 
+      </div>
       <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-      <script src="//code.jquery.com/jquery.js"></script>
+      <script src="http://code.jquery.com/jquery.js"></script>
       <!-- Include all compiled plugins (below), or include individual files as needed -->
       <!-- Latest compiled and minified JavaScript -->
-      <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+      <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
    </body>
 </html>
