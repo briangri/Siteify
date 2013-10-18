@@ -12,7 +12,7 @@ def main():
   # run site
   if "req" in form:
     display(my_site.run(form["req"].value))
-  # display(my_site.run("home"))
+  #display(my_site.run("Home"))
 
 def site_init(my_site):  
   my_site.set_template()

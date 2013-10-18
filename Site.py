@@ -28,4 +28,35 @@ class Site:
 
   def run(self, request):
     # check if the request is something we can deal with
-    return request 
+    if request not in self.pages: 
+      print request
+      print self.pages
+      return "Not Found"
+    
+    # set up our imports 
+    import_statements = ""
+    for an_import in self.imports:
+      if an_import.endswith(".css"):
+        import_statements += "<link rel=\"stylesheet\" type=\"text/css\" href=\"{link}\" />".format(link=an_import)
+      elif an_import.endswith(".js"):
+        import_statements += "<script src=\"{link}\"></script>".format(link=an_import)
+
+    # set up our navigation
+    nav_elements = ""
+    for nav_element in self.pages.keys():
+      if isinstance(self.pages[nav_element], basestring):
+        # Then it is not a sub page
+        nav_elements += "<a href=\"{link}\">{title}</a>".format(link=self.pages[nav_element], title=nav_element)
+  
+    # and set up content
+    page_content = ""
+    try: 
+        page_content = open(self.pages[request]).read()
+    except IOError as error:
+      print "Failed to open content file"
+
+    return self.template.format(IMPORTS=import_statements, NAV=nav_elements, CONTENT=page_content, SUBNAV="") 
+
+
+
+
