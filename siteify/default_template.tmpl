@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
    <head>
-      <title>Bootstrap 101 Template</title>
+      <title>{PAGE_TITLE}</title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       {IMPORTS}
    </head>
@@ -16,17 +16,21 @@
                   <span class="icon-bar"></span>
                   <span class="icon-bar"></span>
                </button>
-               <a class="navbar-brand" href="#home">briangri</a>
+               <a class="navbar-brand" href="#home">{SITE_TITLE}</a>
             </div>
             <div class="navbar-collapse collapse">
                <ul class="nav navbar-nav">
                   {NAV}
+                  {{NAV_ELEMENT}}<li><a href="{URL}">{TITLE}</a></li>{{/NAV_ELEMENT}}
+                  {{SUB_NAV}}
                   <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Projects<b class="caret"></b></a>
-                  <ul class="dropdown-menu">
-                    {SUBNAV}
-                  </ul>
+                    <ul class="dropdown-menu">
+                        {SUB_NAV_ELEMENT_SPOT}
+                        {{SUB_NAV_ELEMENT}}<li><a href="{URL}">{TITLE}</a></li>{{/SUB_NAV_ELEMENT}}
+                    </ul>
                   </li>
+                  {{/SUB_NAV}}
                </ul>
             </div><!--/.nav-collapse -->
          </div>
